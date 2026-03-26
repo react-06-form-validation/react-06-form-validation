@@ -1,7 +1,11 @@
 import styles from './ErrorMessage.module.css';
-const ErrorMessage = (_props) => {
-  // TODO: implement error message rendering according to README requirements
-  return null;
+
+const ErrorMessage = ({ message }) => {
+  if (!message) {
+    return null;
+  }
+
+  return <p className={styles.errorMessage}>{message}</p>;
 };
 
 export default ErrorMessage;
